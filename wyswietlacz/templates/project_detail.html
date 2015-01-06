@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}
+  Project
+{% endblock %}
+{% block content %}
+<h3>Title of project: {{ project.title }}</h3>
+<h4>Client : {{ project.client }}<br>
+    Description: {{ project.description }}<br>
+    Tasks:
+</h4>
+<ul>
+     {% for task in tasks %}
+      <li>
+        {{ task.title }} {{ task.description }}
+      </li>
+    {% endfor %}
+</ul>
+<h4>Back to <a href="{% url 'wyswietlacz.views.projects' %}">list</a> of projects.</h4>
+{% endblock %}

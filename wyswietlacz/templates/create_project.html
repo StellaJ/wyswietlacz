@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}
+  Create Project
+{% endblock %}
+
+{% block content %}
+  <form method="post" action="{% url 'wyswietlacz.views.createproject' %}" >
+    {% csrf_token %}
+    <table>
+      {{ form.as_table }}
+    </table>
+    <p><input type="submit" value="Create"></p>
+  </form>
+{% endblock %}

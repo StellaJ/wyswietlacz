@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}
+  Show Tasks
+{% endblock %}
+
+{% block content %}
+<h3>Show tasks</h3>
+  {% if all_tasks|length > 0 %}
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Elapsed time</th>
+        <th>Project</th>
+        <th>User</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for task in all_tasks %}
+      <tr>
+        <td>{{ task.title }}</td>
+        <td>{{ task.description }}</td>
+        <td>{{ task.time_elapsed }}</td>
+        <td>{{ task.project}}</td>
+        <td>{{ task.app_user }}</td>
+      </tr>
+    {% endfor %}
+      </tbody>
+  </table>
+  {% else %}
+  <span>No tasks.</span>
+  {% endif %}
+  <h4>Create new <a href="{% url 'wyswietlacz.views.createtask' %}">task.</a></h4>
+{% endblock %}

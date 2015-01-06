@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}
+  Show Developers
+{% endblock %}
+
+{% block content %}
+<h3>Show developers</h3>
+  {% if all_developers|length > 0 %}
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Birth date</th>
+        <th>Height</th>
+        <th>Boss</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for developer in all_developers %}
+      <tr>
+        <td>{{ developer.name }}</td>
+        <td>{{ developer.email }}</td>
+        <td>{{ developer.date_of_birth }}</td>
+        <td>{{ developer.height }}</td>
+        <td>{{ developer.supervisor }}</td>
+      </tr>
+    {% endfor %}
+      </tbody>
+  </table>
+  {% else %}
+  <span>No developers.</span>
+  {% endif %}
+  <h4>Create new <a href="{% url 'wyswietlacz.views.createdev' %}">developer.</a></h4>
+{% endblock %}

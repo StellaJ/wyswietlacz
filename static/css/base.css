@@ -1,0 +1,53 @@
+body {
+	background-color: #FFF080;
+}
+
+.header {
+	border-radius:7px;
+    background-color: #1C1212;
+    padding: 20px 20px 20px 20px;
+}
+
+.header h1, .header h1 a, .header h1 a:visited, .header h1 a:active {
+    color: #ECE390;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+.container {
+	margin-left: 60px;
+    padding: 20px 20px 20px 20px
+}
+
+p {
+    color: #000000;
+    font-size: 20pt;
+    text-decoration: none;
+}
+
+a {
+    color: #000000;
+    font-size: 13pt;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #BA5A10;
+}
+table {
+    width: 60%;
+    border: 1px solid gray;
+} 
+
+th {
+	height: 30%;
+	background-color: #1C1212;
+	color: white;
+    border: 1px solid gray;
+}
+
+td {
+	text-align: right;
+	padding: 5px;
+    border: 1px solid gray;
+}
